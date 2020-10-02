@@ -61,19 +61,19 @@ class BranchNameLint {
 			return this.error(this.options.msgBranchDisallowed, this.branch, this.options.regex);
 		}
 
-		if (this.options.prefixes.includes(prefix) === false) {
-			if (this.options.suggestions[prefix]) {
-				this.error(
-					this.options.msgPrefixSuggestion,
-					[prefix, name].join(this.options.seperator),
-					[this.options.suggestions[prefix], name].join(this.options.seperator)
-				);
-			} else {
-				this.error(this.options.msgPrefixNotAllowed, prefix);
-			}
+// 		if (this.options.prefixes.includes(prefix) === false) {
+// 			if (this.options.suggestions[prefix]) {
+// 				this.error(
+// 					this.options.msgPrefixSuggestion,
+// 					[prefix, name].join(this.options.seperator),
+// 					[this.options.suggestions[prefix], name].join(this.options.seperator)
+// 				);
+// 			} else {
+// 				this.error(this.options.msgPrefixNotAllowed, prefix);
+// 			}
 
-			return this.ERROR_CODE;
-		}
+// 			return this.ERROR_CODE;
+// 		}
 
 		return this.SUCCESS_CODE;
 	}
